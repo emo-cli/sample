@@ -16,9 +16,28 @@
     "vue": "^2.6.11",
     "vue-router": "^3.4.9"
   },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "autoprefixer": {},
+      "postcss-pxtorem": {
+        "rootValue": 34,
+        "propList": ["*"],
+        "miniPixelValue": 2
+      }
     }
   },
   "browserslist": [
@@ -34,10 +53,6 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "postcss-pxtorem": "^5.1.1",
-    {{#sass}}
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    {{/sass}}
     "vue-template-compiler": "^2.6.11"
   }
 }
