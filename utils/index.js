@@ -27,19 +27,10 @@ exports.installDependencies = function installDependencies(
     cwd,
     executable = 'npm'
 ) {
-    console.log(`⚙\u{fe0f}  Installing project dependencies.This might take a while...`)
+    console.log(`❄️  Installing project dependencies.This might take a while...`)
     return runCommand(executable, ['install'], {
         cwd,
     })
-}
-
-
-/**
- * Prints the final message with instructions of necessary next steps.
- * @param {Object} data Data from questionnaire.
- */
-exports.printMessage = function printMessage(data, { green, yellow }) {
-    console.log(message)
 }
 
 
@@ -82,4 +73,10 @@ function sortObject(object) {
             sortedObject[item] = object[item]
         })
     return sortedObject
+}
+
+exports.printMessage = function (data, color) {
+    console.log()
+    console.log(`🎉  Successfully created project ${data.destDirName}.`)
+    console.log(`👉  Get started with the following commands:\n\n $ ${clolr(data.inPlace?'npm start':(`cd ${data.destDirName}\n`))}`)
 }
