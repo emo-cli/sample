@@ -11,6 +11,10 @@ const {
 module.exports = {
 
   complete: function(data, { chalk }) {
+
+      console.log('********')
+      console.log(JSON.stringify(data))
+
     const green = chalk.green
 
     sortDependencies(data, green)
