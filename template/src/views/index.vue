@@ -3,7 +3,8 @@
     <img class="logo" :src="require('../assets/logo.png')">
     <p class="slogan">高效混合App快速开发平台</p>
     <div class="blink">
-      <p :class="['event',isDeviceReady?'received':'listening']">{{isDeviceReady?'DEVICE IS READY':'CONNECTING TO DEVICE'}}</p>
+      <p class="event received" v-show="isDeviceReady">DEVICE IS READY</p>
+      <p class="event listening"  v-show="!isDeviceReady">CONNECTING TO DEVICE</p>
     </div>
   </div>
 </template>
