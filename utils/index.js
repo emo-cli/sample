@@ -76,10 +76,8 @@ function sortObject(object) {
 }
 
 exports.printMessage = function (data, color) {
-    console.log()
     console.log(`🎉  Successfully created project ${data.destDirName}.`)
     console.log('👉  Get started with the following commands:')
-    console.log()
     console.log()
     if (!data.inPlace) {
         console.log(` $ ${color(`cd ${data.destDirName}`)}`)
