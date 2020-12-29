@@ -75,13 +75,12 @@ function sortObject(object) {
     return sortedObject
 }
 
-exports.printMessage = function (data, color) {
+exports.printMessage = function (data, cyan, gray) {
     console.log(`🎉  Successfully created project ${data.destDirName}.`)
     console.log('👉  Get started with the following commands:')
     console.log()
     if (!data.inPlace) {
-        console.log(` $ ${color(`cd ${data.destDirName}`)}`)
-        console.log()
+        console.log(` $ ${cyan(`cd ${data.destDirName}`)}`)
     }
-    console.log(` $ ${color('npm start')}`)
+    console.log(` $ ${cyan('npm start')}`)
 }
