@@ -25,11 +25,9 @@ exports.sortDependencies = function sortDependencies(data) {
  */
 exports.installDependencies = function installDependencies(
     cwd,
-    executable = 'npm',
-    color
+    executable = 'npm'
 ) {
-    console.log(`\n\n# ${color('Installing project dependencies ...')}`)
-    console.log('# ========================\n')
+    console.log(`⚙\u{fe0f}  Installing project dependencies.This might take a while...`)
     return runCommand(executable, ['install'], {
         cwd,
     })
@@ -41,7 +39,6 @@ exports.installDependencies = function installDependencies(
  * @param {Object} data Data from questionnaire.
  */
 exports.printMessage = function printMessage(data, { green, yellow }) {
-    const message = '🔥🔥🔥🔥🔥🔥🔥'
     console.log(message)
 }
 
@@ -56,9 +53,6 @@ exports.printMessage = function printMessage(data, { green, yellow }) {
  */
 function runCommand(cmd, args, options) {
     return new Promise((resolve, reject) => {
-
-        console.log(`cmd = ${cmd}, args = ${args}, options = ${options}`)
-
         const spwan = spawn(
             cmd,
             args,

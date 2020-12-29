@@ -18,10 +18,7 @@ module.exports = {
 
         const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
 
-        installDependencies(cwd, data.autoInstall, green)
-            .then(() => {
-                return runLintFix(cwd, data, green)
-            })
+        installDependencies(cwd, data.autoInstall)
             .then(() => {
                 printMessage(data, green)
             })
