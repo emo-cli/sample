@@ -27,7 +27,7 @@ exports.installDependencies = function installDependencies(
     cwd,
     executable = 'npm'
 ) {
-    console.log(`❄️  Installing project dependencies.This might take a while...`)
+    console.log(`🔥️  Installing project dependencies.This might take a while...\n`)
     return runCommand(executable, ['install'], {
         cwd,
     })
@@ -78,5 +78,12 @@ function sortObject(object) {
 exports.printMessage = function (data, color) {
     console.log()
     console.log(`🎉  Successfully created project ${data.destDirName}.`)
-    console.log(`👉  Get started with the following commands:\n\n $ ${clolr(data.inPlace?'npm start':(`cd ${data.destDirName}\n`))}`)
+    console.log('👉  Get started with the following commands:')
+    console.log()
+    console.log()
+    if (!data.inPlace) {
+        console.log(` $ ${color(`cd ${data.destDirName}`)}`)
+        console.log()
+    }
+    console.log(` $ ${color('npm start')}`)
 }
