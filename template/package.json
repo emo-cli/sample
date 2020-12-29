@@ -1,6 +1,6 @@
 {
   "name": "hello",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "serve": "cross-env NODE_ENV=development vue-cli-service serve --open --hot",
@@ -41,6 +41,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "postcss-pxtorem": "^5.1.1",
+    "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.11"
   }
 }
