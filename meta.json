@@ -8,5 +8,5 @@
     },
     filters: {
         'src/router/**/*': 'router'
-  },
+  }
 }
