@@ -1,7 +1,12 @@
 {
-    "name": {
-      "type": "string",
-      "required": true,
-      "label": "Project name"
-    }
+    "prompts": {
+        "name": {
+          "type": "string",
+          "required": true,
+          "label": "Project name"
+        }
+    },
+    filters: {
+        'src/router/**/*': 'router'
+  },
 }
