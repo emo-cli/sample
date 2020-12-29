@@ -56,6 +56,9 @@ exports.printMessage = function printMessage(data, { green, yellow }) {
  */
 function runCommand(cmd, args, options) {
     return new Promise((resolve, reject) => {
+
+        console.log(`cmd = ${cmd}, args = ${args}, options = ${options}`)
+
         const spwan = spawn(
             cmd,
             args,
