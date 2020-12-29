@@ -6,7 +6,7 @@
           "label": "Project name"
         }
     },
-    filters: {
-        'src/router/**/*': 'router'
+    "filters": {
+        "src/router/**/*": "router"
   }
 }
