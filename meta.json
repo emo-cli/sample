@@ -7,6 +7,6 @@
         }
     },
     "filters": {
-        "src/router/**/*": "router"
+        "src/router/*": "router"
   }
 }
