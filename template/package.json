@@ -1,9 +1,6 @@
 {
-  "name": "{{ name }}",
-  "description": "{{ description }}",
+  "name": "hello",
   "version": "1.0.0",
-  "author": "{{ author }}",
-  "license": "{{ license }}",
   "private": true,
   "scripts": {
     "serve": "cross-env NODE_ENV=development vue-cli-service serve --open --hot",
@@ -14,7 +11,8 @@
     "amfe-flexible": "^2.2.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
-    "vue-router": "^3.4.9"
+    "vue-router": "^3.4.9",
+    "vuex": "^3.6.0"
   },
   "eslintConfig": {
     "root": true,
@@ -28,16 +26,6 @@
     "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {},
-      "postcss-pxtorem": {
-        "rootValue": 34,
-        "propList": ["*"],
-        "miniPixelValue": 2
-      }
     }
   },
   "browserslist": [
