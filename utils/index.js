@@ -27,7 +27,7 @@ exports.installDependencies = function installDependencies(
     cwd,
     executable = 'npm'
 ) {
-    console.log(`🔥️  Installing project dependencies.This might take a while...\n`)
+    console.log(`🔥️ Installing project dependencies.This might take a while...\n`)
     return runCommand(executable, ['install'], {
         cwd,
     })
