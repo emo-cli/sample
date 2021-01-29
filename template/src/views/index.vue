@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <img class="logo" :src="require('../assets/logo.png')">
+    <img class="logo" :src="require('@/assets/logo.png')">
     <p class="slogan">高效混合App快速开发平台</p>
     <div class="blink">
       <p class="event received" v-show="isDeviceReady">DEVICE IS READY</p>
